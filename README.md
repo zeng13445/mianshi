@@ -12,8 +12,8 @@
     - put、get（1.8）
     ```
     根据key计算出hashcode，然后定位出所在的桶（当前位置），再将value放入。get类似，也是通过key算出hashcode，再定位到桶，取值。
-    ![image](https://github.com/zeng13445/mianshi/blob/main/images/put.png)
     ```
+     ![image](https://github.com/zeng13445/mianshi/blob/main/images/put.png)
     - 初始化
     ```
     若在构造函数中指定了容量大小7，那么该容量其实是8，因为hash会选择大于该数字的第一个2的n次幂作为容量（即3->4、7->8、9->16）。
