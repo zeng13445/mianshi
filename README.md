@@ -3,7 +3,7 @@
 1. HashMap：
     - 阐述
     ```
-    底层主要是基于数组外加链表组成，链表主要是为了解决hash冲突。
+    底层主要是基于数组外加链表组成，链表主要是为了解决hash冲突，还可解决数组插入数据效率低的问题。
     ```
     - 默认容量和扩容机制
     ```
@@ -18,4 +18,12 @@
     ```
     若在构造函数中指定了容量大小7，那么该容量其实是8，因为hash会选择大于该数字的第一个2的n次幂作为容量（即3->4、7->8、9->16）。
     ```
+2. ConcurrentHashMap：
+    - 阐述
+    ```
+    其实就是同步的HashMap，底层数据结构依旧是数组+链表+红黑树（链表节点大于8转为红黑树）。在多线程场景下解决了hashmap死循环的问题。
+    线程安全方式采用CAS + synchronized方式，又解决了hashtable在多线程场景下性能问题。
+    ```
+    - hashmap、hashtable、concurrenthashmap
+    ![image](https://github.com/zeng13445/mianshi/blob/main/images/difference.png)
     
