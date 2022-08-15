@@ -17,7 +17,15 @@
     ```
     ![image](https://github.com/zeng13445/mianshi/blob/main/images/进制转换.png)
 
-3. ConcurrentHashMap：
+    - 10进制转任何进制
+    ```
+    例：
+    100(D) = 144(O) = 64(H) （100十进制转八进制转16进制）
+    100.345(D) = 1100100.01011(B)
+    ```
+    ![image](https://github.com/zeng13445/mianshi/blob/main/images/10进制转其他.png)
+
+2. ConcurrentHashMap：
     - 阐述
     ```
     其实就是同步的HashMap，底层数据结构依旧是数组+链表+红黑树（链表节点大于8转为红黑树）。在多线程场景下解决了hashmap死循环的问题。
@@ -26,7 +34,7 @@
     - hashmap、hashtable、concurrenthashmap
     ![image](https://github.com/zeng13445/mianshi/blob/main/images/difference.png)
     
-4. GC
+3. GC
     - gc作用
     ```
     gc垃圾回收机制，在适当的时候回收JVM垃圾，防止内存泄露，有效的使用可以使用的内存。
